@@ -1,0 +1,145 @@
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+  .profile{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    height: 100vh;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .rule{
+    color: #ff9500;
+      height: 0.6px;
+      width: 90%;
+      margin-top: 1rem;
+  }
+  .photoView{
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .gridView, .listView{
+    width: 20%;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ff9500 0%, #e77409 100%);
+    border: none;
+  }
+  .gridView:hover,.listView:hover{
+    background-image: linear-gradient(90deg, #ff9500 0%, #e77409 49%, #f04c1e 80%);
+    animation:slidebg 5s linear infinite;
+  }
+  .infiniteScroll{
+    height: 80%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  
+  }
+  .newsFeed::-webkit-scrollbar {
+    display: none;
+  }
+  .infinite-scroll-component__outerdiv{
+    height: 80% !important;
+  }
+  .rule{
+    color: #ff9500;
+      height: 0.6px;
+      width: 100%;
+  }
+  .loader{
+  
+  }
+  .spinner {
+    animation: rotate 1s linear infinite;
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    margin: -25px 0 0 -25px;
+    width: 50px;
+    height: 50px;
+  }
+  .path {
+      stroke: #ff9500;
+      stroke-linecap: round;
+      animation: dash 3s ease-in-out infinite;
+    }
+    
+  
+  
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes dash {
+    0% {
+      stroke-dasharray: 1, 150;
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -35;
+    }
+    100% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -124;
+    }
+  }
+  .imageGrid{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto auto;
+  grid-auto-rows: minmax(50px, auto);
+  padding: 0rem 2rem;
+  margin-bottom: 5rem;
+  }
+  @media only screen and (max-width: 1200px) {
+    .profile{
+      width: 75%;
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+    .profile{
+      width: 85%;
+    }
+  }
+  @media only screen and (max-width: 700px) {
+
+    .main{
+      justify-content: center;
+      padding: 0rem;
+      width: 100%;
+    }
+    .infiniteScroll{
+      width: 90%;
+    }
+    .profile{
+      width: 100%;
+    }
+    .imageGrid{
+      padding: 0rem 0rem;
+  }
+}

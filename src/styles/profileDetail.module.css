@@ -1,0 +1,53 @@
+.profileDetailConatiner{
+    height: 30rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    margin-top: 12rem;
+    
+}
+.profilePic{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pic{
+    border-radius: 10px;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+.count{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+.editButton{
+    margin-top: 1rem;
+    width: 6rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ff9500 0%, #e77409 100%);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.editButton:hover{
+    background-image: linear-gradient(90deg, #ff9500 0%, #e77409 49%, #f04c1e 80%);
+    animation:slidebg 5s linear infinite;}
+
+@media only screen and (max-width: 700px) {
+    .pic{
+        width: 150px;
+        height: 150px;
+    }
+}

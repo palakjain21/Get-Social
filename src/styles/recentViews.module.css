@@ -1,0 +1,69 @@
+.recentViewsContainer{
+    background-color: white;
+    width: 20%;
+    height: 60%;
+    border-radius: 10px;
+    color: black;
+
+}
+.bg{
+    background: linear-gradient(90deg, #ff9500 0%, #e77409 100%);
+    height: 4rem;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+.viewBox{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.rule{
+    color: #ff9500;
+    height: 0.6px;
+}
+.profile{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem;
+}
+.pic{
+    width: 20%;
+    border-radius: 10px;
+}
+.info{
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+.msgBtn{
+    width: 6rem;
+    height: 2rem;
+    border-radius: 10px;
+    /* background: linear-gradient(90deg, #ff9500 0%, #e77409 100%); */
+    background-color: rgb(170, 168, 168);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.msgBtn:hover{
+     background-image: linear-gradient(90deg, #ff9500 0%, #e77409 49%, #f04c1e 80%);
+    animation:slidebg 5s linear infinite;}
+
+    @media only screen and (max-width: 1200px) {
+        .recentViewsContainer{
+            display: none;
+        }
+    }

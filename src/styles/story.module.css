@@ -1,0 +1,25 @@
+.storyContainer{
+    width:90%;
+    height: 5rem;
+}
+.storyCarousel{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.story{
+    border-radius: 10px;
+    width: 64px;
+    height: 60px;
+    background-color: white;
+    background: linear-gradient(90deg, #ff9500 0%, #e77409 100%);
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image{
+    border-radius: 10px;
+}
