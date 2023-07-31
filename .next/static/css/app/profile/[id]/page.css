@@ -1,0 +1,524 @@
+/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[3]!./src/styles/sidebar.module.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************/
+.sidebar_sidebar__A9Lnm{
+    width: 20%;
+    height: 100vh;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    justify-content:space-evenly;
+    align-items: flex-start;
+    padding: 0rem 2rem;
+}
+.sidebar_logo__fDHdH{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+.sidebar_sidebarItem__2RyXS, .sidebar_removableSidebarItem__i_d21{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.sidebar_sidebarItem__2RyXS:hover, .sidebar_removableSidebarItem__i_d21:hover{
+    background-image: linear-gradient(90deg, #ff9500 0%, #e77409 49%, #f04c1e 80%);
+    animation:sidebar_slidebg__O6t2n 5s linear infinite;}
+.sidebar_link__Vyfqe{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+@media only screen and (max-width: 1000px) {
+    .sidebar_hide__f0Krl, .sidebar_logo__fDHdH{
+        display: none;
+    }
+    .sidebar_sidebar__A9Lnm{
+        width: 10%;
+        align-items: center;
+    }
+    .sidebar_sidebarItem__2RyXS, .sidebar_removableSidebarItem__i_d21{
+        justify-content: center;
+        width: 3rem;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .sidebar_sidebar__A9Lnm{
+        width: 100%;
+        height: 5rem;
+        position: absolute;
+        bottom: 0%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: white;
+        flex-direction: row;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        z-index: 100;
+    }
+    /* .sidebarItem{
+        display: none;
+    } */
+}
+@media only screen and (max-width:500px){
+    .sidebar_removableSidebarItem__i_d21{
+        display: none;
+    }
+}
+/*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[3]!./src/styles/profileDetail.module.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************/
+.profileDetail_profileDetailConatiner__iKz0X{
+    height: 30rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    margin-top: 12rem;
+    
+}
+.profileDetail_profilePic__Pi6_d{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profileDetail_pic__7Qufn{
+    border-radius: 10px;
+}
+.profileDetail_details__mZ8_N{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    font-size: small;
+}
+.profileDetail_count__NmsLt{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+.profileDetail_followButton__0eDyJ, .profileDetail_msgButton__YOXcg{
+    margin-top: 1rem;
+    width: 6rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ff9500 0%, #e77409 100%);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profileDetail_followButton__0eDyJ:hover, .profileDetail_msgButton__YOXcg:hover{
+    background-image: linear-gradient(90deg, #ff9500 0%, #e77409 49%, #f04c1e 80%);
+    animation:profileDetail_slidebg__NjsxD 5s linear infinite;}
+
+.profileDetail_btnGrp__Kg_QF{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+.profileDetail_msgButton__YOXcg{
+    margin-left: 1rem;
+}
+
+@media only screen and (max-width: 700px) {
+    .profileDetail_pic__7Qufn{
+        width: 150px;
+        height: 150px;
+    }
+}
+/*!***************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[3]!./src/styles/recentViews.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************/
+.recentViews_recentViewsContainer__xmrJx{
+    background-color: white;
+    width: 20%;
+    height: 60%;
+    border-radius: 10px;
+    color: black;
+
+}
+.recentViews_bg__azmor{
+    background: linear-gradient(90deg, #ff9500 0%, #e77409 100%);
+    height: 4rem;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+.recentViews_viewBox__JO4O1{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.recentViews_rule__5TNs8{
+    color: #ff9500;
+    height: 0.6px;
+}
+.recentViews_profile__WbGwx{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem;
+}
+.recentViews_pic__fb9sH{
+    width: 20%;
+    border-radius: 10px;
+}
+.recentViews_info__K1kgW{
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+.recentViews_msgBtn__Z2ljz{
+    width: 6rem;
+    height: 2rem;
+    border-radius: 10px;
+    /* background: linear-gradient(90deg, #ff9500 0%, #e77409 100%); */
+    background-color: rgb(170, 168, 168);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.recentViews_msgBtn__Z2ljz:hover{
+     background-image: linear-gradient(90deg, #ff9500 0%, #e77409 49%, #f04c1e 80%);
+    animation:recentViews_slidebg__JS6Xs 5s linear infinite;}
+
+    @media only screen and (max-width: 1200px) {
+        .recentViews_recentViewsContainer__xmrJx{
+            display: none;
+        }
+    }
+/*!********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[3]!./src/styles/post.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************/
+.post_postContainer__ZBMvB{
+    width: 100%;
+    background-color: white;
+}
+.post_userDetailAndMore__yFXKJ{
+    width: 100%;
+    height: 4rem;
+    background-color: white;
+    display: flex;
+}
+.post_userImage__8D2J8{
+    width: 10%;
+    height: 100%;
+    border-radius: 50%;
+    margin: 0.5rem;
+}
+.post_userDetails__iEANY{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    align-items: flex-start;
+    cursor: pointer;
+}
+.post_userDetails__iEANY:hover{
+  font-weight: bold;
+}
+.post_more__7FgLS{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 1rem;
+}
+.post_image__HRixn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.post_details__IqRFR{
+    display: flex;
+    justify-content: center;
+    height: 5rem;
+    flex-direction: column;
+    padding-left: 1rem;
+}
+.post_icons__8xN5t{
+    display: flex;
+    margin-top: 0.5rem;
+}
+.post_count__OHpsO{
+    display: flex;
+    color: black;
+    flex-direction: column;
+}
+.post_rule__nUgie{
+    color: #ff9500;
+    height: 1px;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1000px){
+    .post_userDetails__iEANY{
+        margin-left: 1rem;
+    }
+    .post_post__6j0q_{
+        width: 100%;
+    }
+    .post_userImage__8D2J8{
+        width: 15%;
+    }
+}
+@media only screen and (max-width: 500px){
+    .post_userImage__8D2J8{
+        width: 20%;
+    }
+}
+/*!************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[3]!./src/styles/gridPost.module.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************/
+.gridPost_postContainer__wBXQx{
+    width: 100%;
+    background-color: white;
+}
+.gridPost_userDetailAndMore__aiZYV{
+    width: 100%;
+    height: 4rem;
+    background-color: white;
+    display: flex;
+}
+.gridPost_userImage__Lbh8a{
+    width: 10%;
+    height: 100%;
+    border-radius: 50%;
+    margin: 0.5rem;
+}
+.gridPost_userDetails__kCHb_{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    align-items: flex-start;
+    cursor: pointer;
+}
+.gridPost_userDetails__kCHb_:hover{
+  font-weight: bold;
+}
+.gridPost_more__cE56z{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 1rem;
+}
+.gridPost_image__P6ZlV{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gridPost_details__E5lvX{
+    display: flex;
+    justify-content: center;
+    height: 4rem;
+    flex-direction: column;
+    padding-left: 1rem;
+}
+.gridPost_icons__xJ8t_{
+    display: flex;
+}
+.gridPost_count___BuaZ{
+    display: flex;
+    color: black;
+    flex-direction: column;
+}
+.gridPost_rule__gd24S{
+    color: #ff9500;
+    height: 1px;
+    width: 100%;
+}
+.gridPost_post__k5O2f{
+    width: 100%;
+}
+@media only screen and (max-width: 1000px){
+    .gridPost_userDetails__kCHb_{
+        margin-left: 1rem;
+    }
+}
+/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[3]!./src/styles/profile.module.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************/
+.profile_main__ged14 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+  .profile_profile__SE_wG{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    height: 100vh;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .profile_rule__mCPag{
+    color: #ff9500;
+      height: 0.6px;
+      width: 90%;
+      margin-top: 1rem;
+  }
+  .profile_photoView__Ywb8R{
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .profile_infiniteScroll__Hzhud{
+    width: 80%;
+  }
+  .profile_gridView__IeS6m, .profile_listView__h1zgQ{
+    width: 20%;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ff9500 0%, #e77409 100%);
+    border: none;
+  }
+  .profile_gridView__IeS6m:hover,.profile_listView__h1zgQ:hover, .profile_gridView__IeS6m:active, .profile_listView__h1zgQ:active{
+    background-image: linear-gradient(90deg, #ff9500 0%, #e77409 49%, #f04c1e 80%);
+    animation:profile_slidebg__x8dnY 5s linear infinite;
+  }
+
+  .profile_infiniteScroll__Hzhud{
+    height: 80%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  
+  }
+  .profile_newsFeed__MhZdI::-webkit-scrollbar {
+    display: none;
+  }
+  .profile_infinite-scroll-component__outerdiv__O4Rob{
+    height: 80% !important;
+  }
+  .profile_rule__mCPag{
+    color: #ff9500;
+      height: 0.6px;
+      width: 100%;
+  }
+  .profile_spinner__Lsnos {
+    animation: profile_rotate__EfKsa 1s linear infinite;
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    margin: -25px 0 0 -25px;
+    width: 50px;
+    height: 50px;
+  }
+  .profile_path__hdNU8 {
+      stroke: #ff9500;
+      stroke-linecap: round;
+      animation: profile_dash__PgpmF 3s ease-in-out infinite;
+    }
+    
+  
+  
+  @keyframes profile_rotate__EfKsa {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes profile_dash__PgpmF {
+    0% {
+      stroke-dasharray: 1, 150;
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -35;
+    }
+    100% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -124;
+    }
+  }
+  .profile_imageGrid___K3JQ{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto auto;
+  grid-auto-rows: minmax(50px, auto);
+  padding: 0rem 2rem;
+  margin-bottom: 5rem;
+  }
+  @media only screen and (max-width: 1200px) {
+    .profile_profile__SE_wG{
+      width: 75%;
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+    .profile_profile__SE_wG{
+      width: 85%;
+    }
+    .profile_infiniteScroll__Hzhud{
+      padding: 0rem 1rem;
+    }
+  }
+  @media only screen and (max-width: 700px) {
+
+    .profile_main__ged14{
+      justify-content: center;
+      padding: 0rem;
+      width: 100%;
+    }
+    .profile_infiniteScroll__Hzhud{
+      width: 90%;
+    }
+    .profile_profile__SE_wG{
+      width: 100%;
+    }
+    .profile_imageGrid___K3JQ{
+      padding: 0rem 0rem;
+  }
+}

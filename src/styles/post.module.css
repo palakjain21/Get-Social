@@ -70,4 +70,12 @@
     .post{
         width: 100%;
     }
+    .userImage{
+        width: 15%;
+    }
+}
+@media only screen and (max-width: 500px){
+    .userImage{
+        width: 20%;
+    }
 }

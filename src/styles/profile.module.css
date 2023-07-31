@@ -36,6 +36,9 @@
     align-items: center;
     margin-top: 1rem;
   }
+  .infiniteScroll{
+    width: 80%;
+  }
   .gridView, .listView{
     width: 20%;
     height: 2rem;
@@ -67,9 +70,6 @@
     color: #ff9500;
       height: 0.6px;
       width: 100%;
-  }
-  .loader{
-  
   }
   .spinner {
     animation: rotate 1s linear infinite;
@@ -125,6 +125,9 @@
   @media only screen and (max-width: 1000px) {
     .profile{
       width: 85%;
+    }
+    .infiniteScroll{
+      padding: 0rem 1rem;
     }
   }
   @media only screen and (max-width: 700px) {
