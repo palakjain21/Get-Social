@@ -1,16 +1,11 @@
 import styles from "../styles/post.module.css";
 import Image from "next/legacy/image";
-import profile from "../assets/profile.png";
 import more from "../assets/more.png";
-import story from "../assets/profilePic.jpg";
 import like from "../assets/like.png";
 import filledLike from "../assets/filledHeart.png";
 import comment from "../assets/comment.png";
 import download from "../assets/download.png";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
-// import blurhashToBase64 from "@/utils/blurHash";
-import { useState, useCallback } from "react";
 import PostImage from "./PostImage";
 export default function Post({
   url,
@@ -51,7 +46,7 @@ export default function Post({
         </div>
       </div>
       <div className={styles.image} key={key}>
-        <PostImage blur={blur} url={url} width={width} height={height}/>
+        <PostImage blur={blur} url={url} width={width} height={height} />
       </div>
       <div className={styles.details}>
         <div className={styles.icons}>

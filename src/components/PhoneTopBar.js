@@ -1,8 +1,6 @@
-// write a topbar with search box and notification icon
 import styles from "../styles/phoneTopBar.module.css";
 import Image from "next/image";
 import logo from "../assets/logo.png";
-import search from "../assets/search.png";
 import notifications from "../assets/notifications.png";
 export default function PhoneTopBar() {
   return (

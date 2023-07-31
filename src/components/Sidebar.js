@@ -10,7 +10,6 @@ import profile from "../assets/profile.png";
 import settings from "../assets/settings.png";
 import trending from "../assets/trending.png";
 import logo from "../assets/logo.png";
-import { useEffect, useState } from "react";
 export default function Sidebar() {
   return (
     <div className={styles.sidebar}>

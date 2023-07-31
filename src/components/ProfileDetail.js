@@ -5,13 +5,11 @@ export default function ProfileDetail({
   username,
   name,
   bio,
-  likes,
   followers,
   following,
   profilePic,
   totalPhotos,
   location,
-  download,
 }) {
   console.log(username);
   return (

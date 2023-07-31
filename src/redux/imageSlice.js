@@ -7,7 +7,7 @@ const initialState = {
 
 export const fetchImages = createAsyncThunk(
   "images/fetchImages",
-  async (count = 20) => {
+  async (count = 10) => {
     const apiRoot = "https://api.unsplash.com";
     const accessKey = process.env.NEXT_PUBLIC_ACCESS_KEY;
     console.log(accessKey, "accessKey");

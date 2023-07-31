@@ -53,7 +53,7 @@
     .sidebar_sidebar__A9Lnm{
         width: 100%;
         height: 5rem;
-        position: absolute;
+        position: fixed;
         bottom: 0%;
         display: flex;
         justify-content: space-evenly;
@@ -65,9 +65,6 @@
         box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
         z-index: 100;
     }
-    /* .sidebarItem{
-        display: none;
-    } */
 }
 @media only screen and (max-width:500px){
     .sidebar_removableSidebarItem__i_d21{
@@ -149,7 +146,6 @@
     height: 60%;
     border-radius: 10px;
     color: black;
-
 }
 .recentViews_bg__azmor{
     background: linear-gradient(90deg, #ff9500 0%, #e77409 100%);
@@ -196,7 +192,6 @@
     width: 6rem;
     height: 2rem;
     border-radius: 10px;
-    /* background: linear-gradient(90deg, #ff9500 0%, #e77409 100%); */
     background-color: rgb(170, 168, 168);
     border: none;
     display: flex;
@@ -218,6 +213,7 @@
 .post_postContainer__ZBMvB{
     width: 100%;
     background-color: white;
+    margin-bottom: 1.5rem;
 }
 .post_userDetailAndMore__yFXKJ{
     width: 100%;

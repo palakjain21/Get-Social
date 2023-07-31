@@ -4,7 +4,6 @@
     height: 60%;
     border-radius: 10px;
     color: black;
-
 }
 .bg{
     background: linear-gradient(90deg, #ff9500 0%, #e77409 100%);
@@ -51,7 +50,6 @@
     width: 6rem;
     height: 2rem;
     border-radius: 10px;
-    /* background: linear-gradient(90deg, #ff9500 0%, #e77409 100%); */
     background-color: rgb(170, 168, 168);
     border: none;
     display: flex;

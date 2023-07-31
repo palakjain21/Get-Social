@@ -7,49 +7,6 @@ import { useEffect, useState } from "react";
 import Post from "@/components/Post";
 import InfiniteScroll from "react-infinite-scroll-component";
 import GridPost from "@/components/gridPost";
-
-// export default function Profile({ params }) {
-//   const [user, setUser] = useState();
-//   const [images, setImages] = useState([]);
-
-//   const [loaded, setIsLoaded] = useState(false);
-//   const [listView, setListView] = useState(true);
-//   const [gridView, setGridView] = useState(false);
-
-//   const fetchUserData = async (count = 10) => {
-//     const apiRoot = "https://api.unsplash.com";
-//     const accessKey = "Vdo7TpSQRd67RLo5ZKLwA6ZegaWJFkJRcbRnz52cNCM";
-
-//     const res = await axios.get(
-//       `${apiRoot}/users/${params.id}/?client_id=${accessKey}`
-//     );
-//     setUser(res.data);
-//     setIsLoaded(true);
-//   };
-//   const fetchUserPhotos = async (count = 10) => {
-//     const apiRoot = "https://api.unsplash.com";
-//     const accessKey = "Vdo7TpSQRd67RLo5ZKLwA6ZegaWJFkJRcbRnz52cNCM";
-
-//     const res = await axios.get(
-//       `${apiRoot}/users/${params.id}/photos/?client_id=${accessKey}`
-//     );
-//     setImages([...images, ...res.data]);
-//     setIsLoaded(true);
-//   };
-
-//   useEffect(() => {
-//     fetchUserData();
-//     fetchUserPhotos();
-//     console.log(params.id);
-//   }, []);
-//   const handleListView = () => {
-//     setListView(true);
-//     setGridView(false);
-//   };
-//   const handleGridView = () => {
-//     setListView(false);
-//     setGridView(true);
-//   };
 import { useDispatch, useSelector } from "react-redux";
 import {
   fetchUserData,
@@ -68,7 +25,6 @@ export default function Profile({ params }) {
   const images = useSelector(selectImages);
   const loaded = useSelector(selectLoaded);
   const listView = useSelector(selectListView);
-  // const gridView = useSelector(selectGridView);
 
   useEffect(() => {
     console.log(user, "user");
@@ -100,7 +56,6 @@ export default function Profile({ params }) {
           likes={user?.total_likes}
           profilePic={user?.profile_image?.small}
           totalPhotos={user?.total_photos}
-          // photos={user.photos}
         />
         <hr className={styles.rule}></hr>
         <div className={styles.photoView}>
@@ -185,7 +140,6 @@ export default function Profile({ params }) {
                 ))
               ) : (
                 <div className={styles.loader}>
-                  {/* <Image src={like} alt="loading" /> */}
                   <svg className={styles.spinner} viewBox="0 0 50 50">
                     <circle
                       className={styles.path}
