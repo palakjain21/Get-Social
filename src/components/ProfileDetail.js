@@ -37,12 +37,15 @@ export default function ProfileDetail({
           <p>{followers} followers</p>
           <p>{following} following</p>
         </div>
-        <button className={styles.editButton}>
-          Message
-          <span>
-            <Image src={send} width={25} height={20} />
-          </span>
-        </button>
+        <div className={styles.btnGrp}>
+          <button className={styles.followButton}>Follow</button>
+          <button className={styles.msgButton}>
+            Message
+            <span>
+              <Image src={send} width={25} height={20} />
+            </span>
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -12,26 +12,30 @@ export const fetchUserData = createAsyncThunk(
   "images/fetchUserData",
   async (userId) => {
     const apiRoot = "https://api.unsplash.com";
-    const accessKey = "ZSTK_JZ1k8yeMRoTrTskTZHJz4sSICCap3LB3hNyMwQ";
+    const accessKey = "Vdo7TpSQRd67RLo5ZKLwA6ZegaWJFkJRcbRnz52cNCM";
 
-    const response = await axios.get(
+    const response = await fetch(
       `${apiRoot}/users/${userId}/?client_id=${accessKey}`
     );
-    console.log(response.data);
-    return response.data;
+    let data = await response.json();
+    console.log(data);
+    return data;
   }
 );
 
 export const fetchUserPhotos = createAsyncThunk(
   "images/fetchUserPhotos",
   async (userId, count) => {
+    console.log("checking");
     const apiRoot = "https://api.unsplash.com";
-    const accessKey = "ZSTK_JZ1k8yeMRoTrTskTZHJz4sSICCap3LB3hNyMwQ";
+    const accessKey = "Vdo7TpSQRd67RLo5ZKLwA6ZegaWJFkJRcbRnz52cNCM";
 
-    const response = await axios.get(
+    const response = await fetch(
       `${apiRoot}/users/${userId}/photos/?client_id=${accessKey}`
     );
-    return response.data;
+    let data = await response.json();
+    console.log(data, "photos");
+    return data;
   }
 );
 
@@ -49,19 +53,20 @@ const userSlice = createSlice({
         state.user = action.payload;
       })
       .addCase(fetchUserPhotos.fulfilled, (state, action) => {
-        state.images = [...state.images, ...action.payload];
+        console.log(action.payload, "payload");
+        state.images = action.payload;
         state.loaded = true;
       });
   },
 });
 export const selectUser = (state) => {
-  console.log(state, "state");
   return state.users.user;
 };
 export const selectImages = (state) => {
-  return state.images.images;
+  console.log(state, "state");
+  return state.users.images;
 };
-export const selectLoaded = (state) => state.images.loaded;
+export const selectLoaded = (state) => state.users.loaded;
 export const selectListView = (state) => state.users.listView;
 
 export const { toggleView } = userSlice.actions;

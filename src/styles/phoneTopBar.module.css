@@ -1,0 +1,26 @@
+.topbar{
+    width: 100%;
+    height: 3rem;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    flex-direction: row;
+}
+.topCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.searchInput{
+    border: 1px solid #ff8c2e;
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin-right: 0.5rem;
+    height: 2rem;
+    width: 100%;
+    background-color: white;
+    color: gray;
+}

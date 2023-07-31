@@ -8,7 +8,16 @@ import filledLike from "../assets/filledHeart.png";
 import comment from "../assets/comment.png";
 import download from "../assets/download.png";
 import Link from "next/link";
-export default function GridPost({ url, key, likes, likedByUser, user, des }) {
+import PostImage from "./PostImage";
+export default function GridPost({
+  url,
+  key,
+  likes,
+  likedByUser,
+  user,
+  des,
+  blur,
+}) {
   return (
     <div className={styles.postContainer}>
       {/* <div className={styles.userDetailAndMore}>
@@ -34,14 +43,7 @@ export default function GridPost({ url, key, likes, likedByUser, user, des }) {
         </div>
       </div> */}
       <div className={styles.image} key={key}>
-        <Image
-          src={url}
-          alt="post"
-          style={{ objectFit: "cover" }}
-          width={200}
-          height={200}
-          className={styles.post}
-        />
+        <PostImage url={url} blur={blur} width={200} height={200} />
       </div>
       <div className={styles.details}>
         <div className={styles.icons}>

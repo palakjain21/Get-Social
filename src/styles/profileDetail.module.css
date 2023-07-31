@@ -30,7 +30,7 @@
     justify-content: space-between;
     margin-top: 1rem;
 }
-.editButton{
+.followButton, .msgButton{
     margin-top: 1rem;
     width: 6rem;
     height: 2.5rem;
@@ -41,9 +41,18 @@
     justify-content: center;
     align-items: center;
 }
-.editButton:hover{
+.followButton:hover, .msgButton:hover{
     background-image: linear-gradient(90deg, #ff9500 0%, #e77409 49%, #f04c1e 80%);
     animation:slidebg 5s linear infinite;}
+
+.btnGrp{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+.msgButton{
+    margin-left: 1rem;
+}
 
 @media only screen and (max-width: 700px) {
     .pic{

@@ -258,7 +258,7 @@
     justify-content: space-between;
     margin-top: 1rem;
 }
-.profileDetail_editButton__6hljj{
+.profileDetail_followButton__0eDyJ, .profileDetail_msgButton__YOXcg{
     margin-top: 1rem;
     width: 6rem;
     height: 2.5rem;
@@ -269,9 +269,18 @@
     justify-content: center;
     align-items: center;
 }
-.profileDetail_editButton__6hljj:hover{
+.profileDetail_followButton__0eDyJ:hover, .profileDetail_msgButton__YOXcg:hover{
     background-image: linear-gradient(90deg, #ff9500 0%, #e77409 49%, #f04c1e 80%);
     animation:profileDetail_slidebg__NjsxD 5s linear infinite;}
+
+.profileDetail_btnGrp__Kg_QF{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+.profileDetail_msgButton__YOXcg{
+    margin-left: 1rem;
+}
 
 @media only screen and (max-width: 700px) {
     .profileDetail_pic__7Qufn{
@@ -351,6 +360,35 @@
             display: none;
         }
     }
+/*!***************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[3]!./src/styles/phoneTopBar.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************/
+.phoneTopBar_topbar__MXYPy{
+    width: 100%;
+    height: 3rem;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    flex-direction: row;
+}
+.phoneTopBar_topCenter__yxblh{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.phoneTopBar_searchInput__7wzp4{
+    border: 1px solid #ff8c2e;
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin-right: 0.5rem;
+    height: 2rem;
+    width: 100%;
+    background-color: white;
+    color: gray;
+}
 /*!*****************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[3]!./src/app/page.module.css ***!
   \*****************************************************************************************************************************************************************************************************************************************************************/

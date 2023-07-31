@@ -73,6 +73,7 @@ export default function Profile({ params }) {
 
   useEffect(() => {
     console.log(user, "user");
+    console.log(params.id, "params");
     dispatch(fetchUserData(params.id));
     dispatch(fetchUserPhotos(params.id));
   }, [dispatch, params.id]);
@@ -129,6 +130,7 @@ export default function Profile({ params }) {
                         likedByUser={image.liked_by_user}
                         user={image.user}
                         des={image.alt_description}
+                        blur={image.blur_hash}
                       />
                     </>
                   ))
@@ -162,6 +164,7 @@ export default function Profile({ params }) {
                       likedByUser={image.liked_by_user}
                       user={image.user}
                       des={image.alt_description}
+                      blur={image.blur_hash}
                     />
                   </>
                 ))

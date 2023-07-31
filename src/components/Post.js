@@ -1,5 +1,5 @@
 import styles from "../styles/post.module.css";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import profile from "../assets/profile.png";
 import more from "../assets/more.png";
 import story from "../assets/profilePic.jpg";
@@ -9,9 +9,23 @@ import comment from "../assets/comment.png";
 import download from "../assets/download.png";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-export default function Post({ url, key, likes, likedByUser, user, des }) {
-  console.log(url);
+// import blurhashToBase64 from "@/utils/blurHash";
+import { useState, useCallback } from "react";
+import PostImage from "./PostImage";
+export default function Post({
+  url,
+  key,
+  likes,
+  likedByUser,
+  user,
+  des,
+  blur,
+  width,
+  height,
+}) {
   const router = useRouter();
+  console.log(blur, "blur");
+
   return (
     <div className={styles.postContainer}>
       <div className={styles.userDetailAndMore}>
@@ -37,13 +51,7 @@ export default function Post({ url, key, likes, likedByUser, user, des }) {
         </div>
       </div>
       <div className={styles.image} key={key}>
-        <Image
-          src={url}
-          alt="post"
-          width={500}
-          height={500}
-          className={styles.post}
-        />
+        <PostImage blur={blur} url={url} width={width} height={height}/>
       </div>
       <div className={styles.details}>
         <div className={styles.icons}>

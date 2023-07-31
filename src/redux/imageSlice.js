@@ -9,14 +9,16 @@ const initialState = {
 
 export const fetchImages = createAsyncThunk(
   "images/fetchImages",
-  async (count = 10) => {
+  async (count = 20) => {
     const apiRoot = "https://api.unsplash.com";
-    const accessKey = "ZSTK_JZ1k8yeMRoTrTskTZHJz4sSICCap3LB3hNyMwQ";
+    const accessKey = "Vdo7TpSQRd67RLo5ZKLwA6ZegaWJFkJRcbRnz52cNCM";
 
-    const response = await axios.get(
+    const response = await fetch(
       `${apiRoot}/photos/random?client_id=${accessKey}&count=${count}`
     );
-    return response.data;
+    let data = await response.json();
+    console.log(data, "imageSlice");
+    return data;
   }
 );
 

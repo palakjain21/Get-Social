@@ -11,10 +11,9 @@ import { useState, useEffect } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import loader from "@/assets/loader.png";
 import like from "@/assets/like.png";
-import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchImages, selectImages, selectLoaded } from "../redux/imageSlice";
-
+import PhoneTopBar from "@/components/PhoneTopBar";
 // export default function Home() {
 //   const [images, setImages] = useState([]);
 //   const [loaded, setIsLoaded] = useState(false);
@@ -45,6 +44,23 @@ export default function Home() {
   useEffect(() => {
     dispatch(fetchImages());
   }, [dispatch]);
+  const [windowSize, setWindowSize] = useState([
+    window.innerWidth,
+    window.innerHeight,
+  ]);
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowSize([window.innerWidth, window.innerHeight]);
+    };
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+  console.log(windowSize[0]);
 
   // The rest of your component code remains the same
   // Instead of using 'images' and 'loaded' states directly,
@@ -55,6 +71,7 @@ export default function Home() {
       <Sidebar />
 
       <div className={styles.newsFeed}>
+        {windowSize[0] > 500 ? null : <PhoneTopBar />}
         <div className={styles.storyContainer}>
           <Story />
           <hr className={styles.rule}></hr>
@@ -67,23 +84,23 @@ export default function Home() {
               overflowX: "hidden",
             }}
             dataLength={images}
-            next={() => fetchImages(5)}
+            next={() => fetchImages(20)}
             hasMore={true}
-            loader={
-              <div className={styles.loader}>
-                {/* <Image src={like} alt="loading" /> */}
-                <svg className={styles.spinner} viewBox="0 0 50 50">
-                  <circle
-                    className={styles.path}
-                    cx="25"
-                    cy="25"
-                    r="20"
-                    fill="none"
-                    stroke-width="5"
-                  ></circle>
-                </svg>
-              </div>
-            }
+            // loader={
+            //   <div className={styles.loader}>
+            //     {/* <Image src={like} alt="loading" /> */}
+            //     <svg className={styles.spinner} viewBox="0 0 50 50">
+            //       <circle
+            //         className={styles.path}
+            //         cx="25"
+            //         cy="25"
+            //         r="20"
+            //         fill="none"
+            //         stroke-width="5"
+            //       ></circle>
+            //     </svg>
+            //   </div>
+            // }
           >
             <div style={{ marginTop: "30px" }}>
               {loaded ? (
@@ -96,6 +113,7 @@ export default function Home() {
                       likedByUser={image.liked_by_user}
                       user={image.user}
                       des={image.alt_description}
+                      blur={image.blur_hash}
                     />
                   </>
                 ))
