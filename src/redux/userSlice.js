@@ -1,6 +1,4 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
-
 const initialState = {
   user: null,
   images: [],
@@ -12,7 +10,7 @@ export const fetchUserData = createAsyncThunk(
   "images/fetchUserData",
   async (userId) => {
     const apiRoot = "https://api.unsplash.com";
-    const accessKey = "Vdo7TpSQRd67RLo5ZKLwA6ZegaWJFkJRcbRnz52cNCM";
+    const accessKey = process.env.NEXT_PUBLIC_ACCESS_KEY;
 
     const response = await fetch(
       `${apiRoot}/users/${userId}/?client_id=${accessKey}`
@@ -28,7 +26,7 @@ export const fetchUserPhotos = createAsyncThunk(
   async (userId, count) => {
     console.log("checking");
     const apiRoot = "https://api.unsplash.com";
-    const accessKey = "Vdo7TpSQRd67RLo5ZKLwA6ZegaWJFkJRcbRnz52cNCM";
+    const accessKey = process.env.NEXT_PUBLIC_ACCESS_KEY;
 
     const response = await fetch(
       `${apiRoot}/users/${userId}/photos/?client_id=${accessKey}`

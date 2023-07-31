@@ -14,28 +14,6 @@ import like from "@/assets/like.png";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchImages, selectImages, selectLoaded } from "../redux/imageSlice";
 import PhoneTopBar from "@/components/PhoneTopBar";
-// export default function Home() {
-//   const [images, setImages] = useState([]);
-//   const [loaded, setIsLoaded] = useState(false);
-//   const fetchImages = (count = 10) => {
-//     const apiRoot = "https://api.unsplash.com";
-//     const accessKey = "Vdo7TpSQRd67RLo5ZKLwA6ZegaWJFkJRcbRnz52cNCM";
-
-//     axios
-//       .get(`${apiRoot}/photos/random?client_id=${accessKey}&count=${count}`)
-//       .then((res) => {
-//         console.log(res.data[0].urls);
-//         setImages([...images, ...res.data]);
-//         setIsLoaded(true);
-
-//         console.log(images);
-//       });
-//   };
-
-//   useEffect(() => {
-//     fetchImages();
-//   }, []);
-
 export default function Home() {
   const dispatch = useDispatch();
   const images = useSelector(selectImages);
@@ -45,8 +23,8 @@ export default function Home() {
     dispatch(fetchImages());
   }, [dispatch]);
   const [windowSize, setWindowSize] = useState([
-    window.innerWidth,
-    window.innerHeight,
+    window?.innerWidth,
+    window?.innerHeight,
   ]);
 
   useEffect(() => {

@@ -11,7 +11,7 @@ export const fetchImages = createAsyncThunk(
   "images/fetchImages",
   async (count = 20) => {
     const apiRoot = "https://api.unsplash.com";
-    const accessKey = "Vdo7TpSQRd67RLo5ZKLwA6ZegaWJFkJRcbRnz52cNCM";
+    const accessKey = process.env.NEXT_PUBLIC_ACCESS_KEY;
 
     const response = await fetch(
       `${apiRoot}/photos/random?client_id=${accessKey}&count=${count}`
