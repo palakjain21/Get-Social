@@ -21,8 +21,11 @@ This web application is built using Next.js and leverages the Unsplash OpenAPI t
 
 ## Snapshots
 ![Screenshot from 2023-07-31 21-18-12](https://github.com/palakjain21/Get-Social/assets/56087514/90bd74fb-e496-43e5-bfc7-c0237667fbd2)
+
 ![Screenshot from 2023-07-31 21-17-54](https://github.com/palakjain21/Get-Social/assets/56087514/81e6276b-83ed-44f8-b796-e555e77a27c5)
+
 ![Screenshot from 2023-07-31 21-17-28](https://github.com/palakjain21/Get-Social/assets/56087514/625ec76c-aad3-463e-a105-976649c95c88)
+
 ![Screenshot from 2023-07-31 21-17-02](https://github.com/palakjain21/Get-Social/assets/56087514/29bae634-cd6a-4a9b-b414-be28a42f4e26)
 
 
