@@ -19,9 +19,16 @@ This web application is built using Next.js and leverages the Unsplash OpenAPI t
    Offers the option to switch to the list view of the selected image using a component created for the news feed.
    Handles loading, empty, and error states gracefully.
 
+## Snapshots
+![Screenshot from 2023-07-31 21-18-12](https://github.com/palakjain21/Get-Social/assets/56087514/90bd74fb-e496-43e5-bfc7-c0237667fbd2)
+![Screenshot from 2023-07-31 21-17-54](https://github.com/palakjain21/Get-Social/assets/56087514/81e6276b-83ed-44f8-b796-e555e77a27c5)
+![Screenshot from 2023-07-31 21-17-28](https://github.com/palakjain21/Get-Social/assets/56087514/625ec76c-aad3-463e-a105-976649c95c88)
+![Screenshot from 2023-07-31 21-17-02](https://github.com/palakjain21/Get-Social/assets/56087514/29bae634-cd6a-4a9b-b414-be28a42f4e26)
+
+
 ## Routing
 
-    Implements dynamic routing to navigate to specific user profiles.
+Implements dynamic routing to navigate to specific user profiles.
 
 ## State Management
 
@@ -31,11 +38,11 @@ The application utilizes react-redux and Redux Toolkit as the state management l
 
 The codebase follows a standard, well-defined folder structure for better organization and maintainability. The key directories include:
 
-    components: Contains reusable React components used across the application.
-    app: Includes the pages and routes of the application, such as the News Feed, User Profile, and Home pages.
-    redux: Contains Redux-related files, such as actions, reducers, and the store configuration.
-    styles: Holds the CSS files, including native CSS for styling, following the no UI library requirement.
-    assets: Contains all the images used throught the application
+components: Contains reusable React components used across the application.
+app: Includes the pages and routes of the application, such as the News Feed, User Profile, and Home pages.
+redux: Contains Redux-related files, such as actions, reducers, and the store configuration.
+styles: Holds the CSS files, including native CSS for styling, following the no UI library requirement.
+assets: Contains all the images used throught the application
 
 ## UI and Responsiveness
 
