@@ -1,6 +1,4 @@
-// redux/imagesSlice.js
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
 
 const initialState = {
   images: [],
@@ -12,7 +10,7 @@ export const fetchImages = createAsyncThunk(
   async (count = 20) => {
     const apiRoot = "https://api.unsplash.com";
     const accessKey = process.env.NEXT_PUBLIC_ACCESS_KEY;
-
+    console.log(accessKey, "accessKey");
     const response = await fetch(
       `${apiRoot}/photos/random?client_id=${accessKey}&count=${count}`
     );

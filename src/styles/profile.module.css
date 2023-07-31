@@ -46,10 +46,11 @@
     background: linear-gradient(90deg, #ff9500 0%, #e77409 100%);
     border: none;
   }
-  .gridView:hover,.listView:hover{
+  .gridView:hover,.listView:hover, .gridView:active, .listView:active{
     background-image: linear-gradient(90deg, #ff9500 0%, #e77409 49%, #f04c1e 80%);
     animation:slidebg 5s linear infinite;
   }
+
   .infiniteScroll{
     height: 80%;
     margin-top: 1rem;

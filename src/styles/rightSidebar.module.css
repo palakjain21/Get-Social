@@ -31,11 +31,29 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
-.views{
+.viewsAndLikes{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0rem 1rem;
+}
+.views{
+    /* display: flex; */
     color: black;
-    justify-content: space-around;
-    align-items: center;
+    /* justify-content: flex-start;
+    align-items: center; */
+    width: 100%;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+    color: rgb(5, 97, 227);
+    font-weight: bold;
+
 }
 .switch{
     color: rgb(5, 97, 227);

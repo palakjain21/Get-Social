@@ -1,12 +1,9 @@
 "use client";
-import Image from "next/image";
 import styles from "@/styles/profile.module.css";
 import Sidebar from "@/components/Sidebar";
 import ProfileDetail from "@/components/ProfileDetail";
 import RecentViews from "@/components/RecentViews";
-import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import axios from "axios";
 import Post from "@/components/Post";
 import InfiniteScroll from "react-infinite-scroll-component";
 import GridPost from "@/components/gridPost";
@@ -61,7 +58,8 @@ import {
   selectImages,
   selectLoaded,
   selectListView,
-  toggleView,
+  toggleListView,
+  toggleGridView,
 } from "../../../redux/userSlice";
 
 export default function Profile({ params }) {
@@ -70,6 +68,7 @@ export default function Profile({ params }) {
   const images = useSelector(selectImages);
   const loaded = useSelector(selectLoaded);
   const listView = useSelector(selectListView);
+  // const gridView = useSelector(selectGridView);
 
   useEffect(() => {
     console.log(user, "user");
@@ -79,11 +78,11 @@ export default function Profile({ params }) {
   }, [dispatch, params.id]);
 
   const handleListView = () => {
-    dispatch(toggleView());
+    dispatch(toggleListView());
   };
 
   const handleGridView = () => {
-    dispatch(toggleView());
+    dispatch(toggleGridView());
   };
 
   return (
@@ -105,10 +104,26 @@ export default function Profile({ params }) {
         />
         <hr className={styles.rule}></hr>
         <div className={styles.photoView}>
-          <button className={styles.gridView} onClick={handleGridView}>
+          <button
+            className={styles.gridView}
+            onClick={handleGridView}
+            style={{
+              backgroundImage: !listView
+                ? " linear-gradient(90deg, #ff9500 20%, #e77409 39%, #f04c1e 90%"
+                : "linear-gradient(90deg, #ff9500 0%, #e77409 100%)",
+            }}
+          >
             Grid View
           </button>
-          <button className={styles.listView} onClick={handleListView}>
+          <button
+            className={styles.listView}
+            onClick={handleListView}
+            style={{
+              backgroundImage: listView
+                ? " linear-gradient(90deg, #ff9500 20%, #e77409 39%, #f04c1e 90%"
+                : "linear-gradient(90deg, #ff9500 0%, #e77409 100%)",
+            }}
+          >
             List View
           </button>
         </div>

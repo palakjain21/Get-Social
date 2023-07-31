@@ -3,7 +3,8 @@ const initialState = {
   user: null,
   images: [],
   loaded: false,
-  listView: true,
+  listView: false,
+  gridView: true,
 };
 
 export const fetchUserData = createAsyncThunk(
@@ -41,8 +42,13 @@ const userSlice = createSlice({
   name: "images",
   initialState,
   reducers: {
-    toggleView(state) {
-      state.listView = !state.listView;
+    toggleListView(state) {
+      state.listView = true;
+      state.gridView = false;
+    },
+    toggleGridView(state) {
+      state.listView = false;
+      state.gridView = true;
     },
   },
   extraReducers: (builder) => {
@@ -67,6 +73,7 @@ export const selectImages = (state) => {
 export const selectLoaded = (state) => state.users.loaded;
 export const selectListView = (state) => state.users.listView;
 
-export const { toggleView } = userSlice.actions;
+export const { toggleListView } = userSlice.actions;
+export const { toggleGridView } = userSlice.actions;
 
 export default userSlice.reducer;

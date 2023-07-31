@@ -1,16 +1,11 @@
 "use client";
-import Image from "next/image";
 import styles from "./page.module.css";
 import Sidebar from "@/components/Sidebar";
 import Story from "@/components/Story";
 import Post from "@/components/Post";
 import RightSidebar from "@/components/RightSidebar";
-import ProfileDetail from "@/components/ProfileDetail";
-import RecentViews from "@/components/RecentViews";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
-import loader from "@/assets/loader.png";
-import like from "@/assets/like.png";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchImages, selectImages, selectLoaded } from "../redux/imageSlice";
 import PhoneTopBar from "@/components/PhoneTopBar";
@@ -22,34 +17,12 @@ export default function Home() {
   useEffect(() => {
     dispatch(fetchImages());
   }, [dispatch]);
-  const [windowSize, setWindowSize] = useState([
-    window?.innerWidth,
-    window?.innerHeight,
-  ]);
-
-  useEffect(() => {
-    const handleWindowResize = () => {
-      setWindowSize([window.innerWidth, window.innerHeight]);
-    };
-
-    window.addEventListener("resize", handleWindowResize);
-
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, []);
-  console.log(windowSize[0]);
-
-  // The rest of your component code remains the same
-  // Instead of using 'images' and 'loaded' states directly,
-  // use the Redux store values 'images' and 'loaded' from useSelector.
 
   return (
     <main className={styles.main}>
       <Sidebar />
-
       <div className={styles.newsFeed}>
-        {windowSize[0] > 500 ? null : <PhoneTopBar />}
+        <PhoneTopBar />
         <div className={styles.storyContainer}>
           <Story />
           <hr className={styles.rule}></hr>
@@ -97,7 +70,6 @@ export default function Home() {
                 ))
               ) : (
                 <div className={styles.loader}>
-                  {/* <Image src={like} alt="loading" /> */}
                   <svg className={styles.spinner} viewBox="0 0 50 50">
                     <circle
                       className={styles.path}
@@ -114,9 +86,7 @@ export default function Home() {
           </InfiniteScroll>
         </div>
       </div>
-      {/* <ProfileDetail /> */}
       <RightSidebar />
-      {/* <RecentViews /> */}
     </main>
   );
 }

@@ -1,68 +1,54 @@
 import styles from "../styles/recentViews.module.css";
 import Image from "next/image";
-import profilePic from "../assets/profilePic.jpg";
-import send from "../assets/send.png";
+import storypic2 from "../assets/storypic2.png";
+import storypic3 from "../assets/storypic3.png";
+import storypic4 from "../assets/storypic4.png";
 export default function RecentViews() {
   return (
     <div className={styles.recentViewsContainer}>
       <div className={styles.bg}>
-        <p>Recent views on your profile</p>
+        <p>Recent likes on this profile</p>
       </div>
       <div className={styles.viewsBox}>
         <div className={styles.profile}>
           <Image
-            src={profilePic}
+            src={storypic2}
             alt="profile"
             width={50}
             height={50}
             className={styles.pic}
           />
           <div className={styles.info}>
-            <p>Username</p>
-            <button className={styles.msgBtn}>
-              Message
-              <span>
-                <Image src={send} width={0} height={20} />
-              </span>
-            </button>{" "}
+            <p>nature_photographer</p>
+            <button className={styles.msgBtn}>View profile</button>{" "}
           </div>
         </div>
         <hr className={styles.rule}></hr>
         <div className={styles.profile}>
           <Image
-            src={profilePic}
+            src={storypic3}
             alt="profile"
             width={50}
             height={50}
             className={styles.pic}
           />
           <div className={styles.info}>
-            <p>Username</p>
-            <button className={styles.msgBtn}>
-              Message
-              <span>
-                <Image src={send} width={0} height={20} />
-              </span>
-            </button>{" "}
+            <p>nate_angels</p>
+            <button className={styles.msgBtn}>View profile</button>{" "}
           </div>
         </div>
         <hr className={styles.rule}></hr>
         <div className={styles.profile}>
           <Image
-            src={profilePic}
+            src={storypic4}
             alt="profile"
             width={50}
             height={50}
             className={styles.pic}
           />
           <div className={styles.info}>
-            <p>Username</p>
-            <button className={styles.msgBtn}>
-              Message
-              <span>
-                <Image src={send} width={0} height={20} />
-              </span>
-            </button>
+            <p>tech_clg</p>
+            <button className={styles.msgBtn}>View profile</button>
           </div>
         </div>
         <hr className={styles.rule}></hr>

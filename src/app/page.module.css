@@ -15,7 +15,7 @@
   background-color: white;
   justify-content: center;
   align-items: center;
-  overflow-y: auto;
+  overflow-y: hidden;
   overflow-x: hidden;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -44,7 +44,7 @@
 .rule{
   color: #ff9500;
     height: 0.6px;
-    width: 100%;
+    width: 90%;
 }
 .loader{
 
@@ -64,7 +64,7 @@
     stroke-linecap: round;
     animation: dash 3s ease-in-out infinite;
   }
-  
+
 
 
 @keyframes rotate {

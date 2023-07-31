@@ -23,13 +23,15 @@ export default function RightSidebar() {
         </p>
         <p>Software Developer</p>
       </div>
-      <div className={styles.views}>
-        <p>Total views on profile</p>
-        <p>200</p>
-      </div>
-      <div className={styles.views}>
-        <p>Total likes on profile</p>
-        <p>168</p>
+      <div className={styles.viewsAndLikes}>
+        <div className={styles.views}>
+          <p className={styles.left}>Total views on profile</p>
+          <p className={styles.right}>200</p>
+        </div>
+        <div className={styles.views}>
+          <p className={styles.left}>Total likes on profile</p>
+          <p className={styles.right}>168</p>
+        </div>
       </div>
     </div>
   );

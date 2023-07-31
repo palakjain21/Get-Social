@@ -12,23 +12,6 @@ import trending from "../assets/trending.png";
 import logo from "../assets/logo.png";
 import { useEffect, useState } from "react";
 export default function Sidebar() {
-  const [windowSize, setWindowSize] = useState([
-    window.innerWidth,
-    window.innerHeight,
-  ]);
-
-  useEffect(() => {
-    const handleWindowResize = () => {
-      setWindowSize([window.innerWidth, window.innerHeight]);
-    };
-
-    window.addEventListener("resize", handleWindowResize);
-
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, []);
-  console.log(windowSize[0]);
   return (
     <div className={styles.sidebar}>
       <div className={styles.logo}>
@@ -50,16 +33,14 @@ export default function Sidebar() {
           </a>
         </Link>
       </div>
-      {windowSize[0] > 500 ? (
-        <div className={styles.sidebarItem}>
-          <Link href="/search" className={styles.link}>
-            <Image src={search} alt="search" width={30} height={30} />
-            <a style={{ marginLeft: "0.5rem" }} className={styles.hide}>
-              Search
-            </a>
-          </Link>
-        </div>
-      ) : null}
+      <div className={styles.removableSidebarItem}>
+        <Link href="/search" className={styles.link}>
+          <Image src={search} alt="search" width={30} height={30} />
+          <a style={{ marginLeft: "0.5rem" }} className={styles.hide}>
+            Search
+          </a>
+        </Link>
+      </div>
 
       <div className={styles.sidebarItem}>
         <Link href="/create" className={styles.link}>
@@ -69,22 +50,20 @@ export default function Sidebar() {
           </a>
         </Link>
       </div>
-      {windowSize[0] > 500 ? (
-        <div className={styles.sidebarItem}>
-          <Link href="/notifications" className={styles.link}>
-            <Image
-              src={notifications}
-              alt="notifications"
-              width={30}
-              height={30}
-              className={styles.iconHide}
-            />
-            <a style={{ marginLeft: "0.5rem" }} className={styles.hide}>
-              Notifications
-            </a>
-          </Link>
-        </div>
-      ) : null}
+      <div className={styles.removableSidebarItem}>
+        <Link href="/notifications" className={styles.link}>
+          <Image
+            src={notifications}
+            alt="notifications"
+            width={30}
+            height={30}
+            className={styles.iconHide}
+          />
+          <a style={{ marginLeft: "0.5rem" }} className={styles.hide}>
+            Notifications
+          </a>
+        </Link>
+      </div>
       <div className={styles.sidebarItem}>
         <Link href="/messages" className={styles.link}>
           <Image src={message} alt="messages" width={30} height={30} />
@@ -93,16 +72,14 @@ export default function Sidebar() {
           </a>
         </Link>
       </div>
-      {windowSize[0] > 500 ? (
-        <div className={styles.sidebarItem}>
-          <Link href="/settings" className={styles.link}>
-            <Image src={settings} alt="settings" width={30} height={30} />
-            <a style={{ marginLeft: "0.5rem" }} className={styles.hide}>
-              Settings
-            </a>
-          </Link>
-        </div>
-      ) : null}
+      <div className={styles.removableSidebarItem}>
+        <Link href="/settings" className={styles.link}>
+          <Image src={settings} alt="settings" width={30} height={30} />
+          <a style={{ marginLeft: "0.5rem" }} className={styles.hide}>
+            Settings
+          </a>
+        </Link>
+      </div>
       <div className={styles.sidebarItem}>
         <Link href="/profile" className={styles.link}>
           <Image src={profile} alt="profile" width={30} height={30} />
